@@ -1,20 +1,20 @@
-// Click event
-document.getElementById("btn").addEventListener("click", function () {
-    document.getElementById("message").textContent = "Button Clicked!";
-});
+let menu=document.querySelector('#menu-icon');
+let navbar=document.querySelector('.navbar');
 
-// Mouseover event
-document.getElementById("btn").addEventListener("mouseover", function () {
-    this.style.backgroundColor = "green";
-});
+menu.onclick=() => {
+    menu.classList.toggle('bx-x');
+    navbar.classList.toggle('active');
 
-// Mouseout event
-document.getElementById("btn").addEventListener("mouseout", function () {
-    this.style.backgroundColor = "#007bff";
-});
+}
+window.onscroll =() => {
+    menu.classList.remove('bx-x');
+    navbar.classList.remove('active');
 
-// Input event
-document.getElementById("nameInput").addEventListener("input", function () {
-    document.getElementById("message").textContent =
-        "Hello, " + this.value;
+}
+const typed = new Typed('.multiple-text', {
+      strings: ['Frontend Developer','Backend Developer', 'Blockchain Developer', 'Web Designer', 'YouTuber'],
+      typeSpeed: 80,
+      backspeed:80,
+      blackDelay:1200,
+      loop:true,
 });
